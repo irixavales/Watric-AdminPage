@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Table, Button } from 'reactstrap';
+import { Card, Table } from 'reactstrap';
 
 export default class TableComponent extends React.Component {
 

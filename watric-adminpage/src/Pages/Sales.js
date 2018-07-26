@@ -25,7 +25,7 @@ export default class SalesComponent extends React.Component {
         </div>
         <Table
           columns={['#', 'Customer', 'Order', 'Total', 'Date', 'Shipping Info', 'Status']}
-          data={[]}
+          data={this.state.sales}
           detail='true'
         />
       </div>

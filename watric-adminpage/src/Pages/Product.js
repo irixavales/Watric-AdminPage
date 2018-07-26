@@ -30,7 +30,7 @@ export default class ProductComponent extends React.Component {
           <Col sm={12}>
             <Table
               columns={['#', 'Name', 'Price']}
-              data={this.state.products}
+              data={[]}
               edit='true'
               editModal={<Modal label='Edit' title='Edit Product' body={<ProductForm product={{}} />} secondButton='DELETE' />}
             />
