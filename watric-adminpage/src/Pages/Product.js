@@ -15,9 +15,15 @@ export default class ProductComponent extends React.Component {
   }
 
   componentWillMount() {
+    // let result = [];
+
     fetch('http://localhost:5000/products')
       .then(result => result.json())
-      .then(data => this.setState({products: data.Products}, () => console.log(this.state.products)));
+      .then(data => this.setState({products: data.Products},
+        () => console.log(this.state.products)
+      )
+    );
+
   }
 
   render() {
@@ -30,7 +36,7 @@ export default class ProductComponent extends React.Component {
           <Col sm={12}>
             <Table
               columns={['#', 'Name', 'Price']}
-              data={[]}
+              data={this.state.products}
               edit='true'
               editModal={<Modal label='Edit' title='Edit Product' body={<ProductForm product={{}} />} secondButton='DELETE' />}
             />

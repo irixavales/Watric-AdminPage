@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Card, CardTitle, CardText, CardHeader, CardBody, CardLink, CardDeck } from 'reactstrap';
+import { Card, CardTitle, CardText, CardHeader, CardBody, CardLink, CardDeck } from 'reactstrap';
 import Title from '../Components/ContentTitle';
 
 export default class IndividualOrder extends React.Component {

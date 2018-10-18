@@ -12,6 +12,7 @@ export default class TableComponent extends React.Component {
       editModal: this.props.editModal,
       detail: this.props.detail
     };
+    console.log('data:', this.state.data);
   }
 
   render() {
@@ -28,8 +29,8 @@ export default class TableComponent extends React.Component {
             <tbody>
               {this.state.data.map(row =>
                 <tr>
-                  {Object.key(row).map((key, index) =>
-                    <td>{row[key]}</td>
+                  {row.map(col =>
+                    <td>{col}</td>
                   )}
                   {this.state.edit &&
                     <td>{this.state.editModal}</td>
